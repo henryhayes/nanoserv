@@ -133,14 +133,14 @@ all-handlers-compat:
 clean: clean-main clean-compat clean-documentation clean-examples
 
 clean-main:
-	find $(MAIN_DIR)/handlers/ |grep ".php$$" |xargs rm -f
+	find $(MAIN_DIR)/handlers/ -type f -name '*.php' | xargs rm -f
 	rm -f $(MAIN_DIR)/nanoserv.php
 
 clean-compat:
-	find $(COMPAT_DIR)/ |grep ".php$$" |xargs rm -f
+	find $(COMAPT_DIR)/ -type f -name '*.php' | xargs rm -f
 
 clean-documentation:
 	rm -rf $(DOC_DIR)
 
 clean-examples:
-	rm -f examples/*.php
+	find examples/ -type f -name '*.php' | xargs rm -f
