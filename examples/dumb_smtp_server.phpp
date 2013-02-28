@@ -22,4 +22,3 @@ class dumb_smtpd extends {{{CLASS_SMTP_SERVER}}} {
 {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:250", "dumb_smtpd")->Activate();
 {{{CLASS_CORE}}}::Run();
 
-?>

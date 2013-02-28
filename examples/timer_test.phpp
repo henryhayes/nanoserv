@@ -30,4 +30,3 @@ class timer_test extends {{{CLASS_CONNECTION_HANDLER}}} {
 {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:999", "timer_test")->Activate();
 {{{CLASS_CORE}}}::Run();
 
-?>

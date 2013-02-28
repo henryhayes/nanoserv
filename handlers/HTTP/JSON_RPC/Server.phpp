@@ -111,4 +111,3 @@ abstract class {{{CLASS_JSON_RPC_SERVER}}} extends {{{CLASS_HTTP_SERVER}}} {
 
 }
 
-?>

@@ -47,4 +47,3 @@ $o->value = 100;
 
 {{{CLASS_CORE}}}::Run();
 
-?>

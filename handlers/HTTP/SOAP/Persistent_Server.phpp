@@ -107,4 +107,3 @@ class {{{CLASS_SOAP_PERSISTENT_SERVER}}} extends {{{CLASS_SOAP_SERVER}}} {
 
 }
 
-?>

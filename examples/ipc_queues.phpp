@@ -202,4 +202,3 @@ pecho("work finished in " . number_format(microtime(true) - $start_mt, 2) . " se
 
 foreach ($pids as $pid) posix_kill($pid, SIGTERM);
 
-?>

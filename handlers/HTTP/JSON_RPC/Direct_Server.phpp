@@ -54,4 +54,3 @@ abstract class {{{CLASS_JSON_RPC_DIRECT_SERVER}}} extends {{{CLASS_JSON_RPC_SERV
 
 }
 
-?>

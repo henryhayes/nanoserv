@@ -69,4 +69,3 @@ class {{{CLASS_XML_RPC_PERSISTENT_SERVER}}} extends {{{CLASS_XML_RPC_SERVER}}} {
 
 }
 
-?>

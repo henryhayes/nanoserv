@@ -43,4 +43,3 @@ Nanoserv::New_Listener("udp://0.0.0.0:37", "time_server_udp")->Activate();
 
 Nanoserv::Run();
 
-?>

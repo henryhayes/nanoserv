@@ -338,4 +338,3 @@ abstract class {{{CLASS_XML_RPC_SERVER}}} extends {{{CLASS_HTTP_SERVER}}} {
 
 }
 
-?>

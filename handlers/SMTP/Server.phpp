@@ -255,4 +255,3 @@ abstract class {{{CLASS_SMTP_SERVER}}} extends {{{CLASS_LINE_INPUT_CONNECTION}}}
 
 }
 
-?>

@@ -151,4 +151,3 @@ abstract class {{{CLASS_TELNET_CONNECTION}}} extends {{{CLASS_CONNECTION_HANDLER
 
 }
 
-?>

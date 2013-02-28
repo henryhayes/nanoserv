@@ -141,4 +141,3 @@ abstract class {{{CLASS_SYSLOG_SERVER}}} extends {{{CLASS_DATAGRAM_HANDLER}}} {
 
 }
 
-?>

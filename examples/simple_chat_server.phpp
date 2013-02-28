@@ -79,4 +79,3 @@ class simple_chat_server extends {{{CLASS_TELNET_LINE_INPUT_CONNECTION}}} {
 Nanoserv::New_Listener("tcp://[::]:999", "simple_chat_server")->Activate();
 Nanoserv::Run();
 
-?>

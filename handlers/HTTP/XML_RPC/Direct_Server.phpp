@@ -60,4 +60,3 @@ abstract class {{{CLASS_XML_RPC_DIRECT_SERVER}}} extends {{{CLASS_XML_RPC_SERVER
 
 }
 
-?>

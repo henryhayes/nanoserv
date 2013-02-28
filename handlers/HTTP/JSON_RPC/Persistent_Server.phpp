@@ -69,4 +69,3 @@ class {{{CLASS_JSON_RPC_PERSISTENT_SERVER}}} extends {{{CLASS_JSON_RPC_SERVER}}}
 
 }
 
-?>

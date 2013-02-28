@@ -402,4 +402,3 @@ abstract class {{{CLASS_HTTP_ASYNC_SERVER}}} extends {{{CLASS_HTTP_SERVER}}} {
 
 }
 
-?>

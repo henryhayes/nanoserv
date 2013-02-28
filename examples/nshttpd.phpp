@@ -71,4 +71,3 @@ $ssl->Activate() or die("unable to activate ssl listener");
 
 {{{CLASS_CORE}}}::Run();
 
-?>

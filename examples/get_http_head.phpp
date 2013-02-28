@@ -31,4 +31,3 @@ class http_head_client extends {{{CLASS_CONNECTION_HANDLER}}} {
 {{{CLASS_CORE}}}::New_Connection("tcp://www.google.com:80", "http_head_client")->Connect();
 {{{CLASS_CORE}}}::Run();
 
-?>

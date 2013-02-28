@@ -479,4 +479,3 @@ abstract class {{{CLASS_SOAP_SERVER}}} extends {{{CLASS_HTTP_SERVER}}} {
 
 }
 
-?>

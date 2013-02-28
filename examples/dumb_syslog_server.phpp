@@ -23,4 +23,3 @@ class dumb_syslogger extends {{{CLASS_SYSLOG_SERVER}}} {
 {{{CLASS_CORE}}}::New_Listener("udp://0.0.0.0:514", "dumb_syslogger")->Activate();
 {{{CLASS_CORE}}}::Run();
 
-?>

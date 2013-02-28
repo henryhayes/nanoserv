@@ -18,4 +18,3 @@ class dumb_jsonrpc_httpd extends {{{CLASS_JSON_RPC_DIRECT_SERVER}}} {
 {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:800", "dumb_jsonrpc_httpd")->Activate();
 {{{CLASS_CORE}}}::Run();
 
-?>

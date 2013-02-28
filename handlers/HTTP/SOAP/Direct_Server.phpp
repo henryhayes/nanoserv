@@ -81,4 +81,3 @@ abstract class {{{CLASS_SOAP_DIRECT_SERVER}}} extends {{{CLASS_SOAP_SERVER}}} {
 
 }
 
-?>
