@@ -34,7 +34,7 @@ namespace Nanoserv\HTTP\SOAP;
 /**
  * Require the SOAP server
  */
-require_once "{{{FILENAME_SOAP}}}";
+//require_once "{{{FILENAME_SOAP}}}";
 
 /**
  * Persistent SOAP over HTTP service handler class

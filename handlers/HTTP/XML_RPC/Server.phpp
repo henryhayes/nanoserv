@@ -35,7 +35,7 @@ use \SimpleXMLElement;
 /**
  * Require the HTTP server
  */
-require_once "{{{FILENAME_HTTP}}}";
+//require_once "{{{FILENAME_HTTP}}}";
 
 
 /**

@@ -34,7 +34,7 @@ namespace Nanoserv\HTTP\JSON_RPC;
 /**
  * Require the JSON-RPC server
  */
-require_once "{{{FILENAME_JSON_RPC}}}";
+//require_once "{{{FILENAME_JSON_RPC}}}";
 
 /**
  * Persistent JSON-RPC server class

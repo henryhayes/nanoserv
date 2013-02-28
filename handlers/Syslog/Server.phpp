@@ -34,7 +34,7 @@ namespace Nanoserv\Syslog;
 /**
  * Require the nanoserv core
  */
-require_once "{{{FILENAME_CORE}}}";
+//require_once "{{{FILENAME_CORE}}}";
 
 /**
  * Syslog protocol handler handler class

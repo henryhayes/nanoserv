@@ -34,7 +34,7 @@ namespace Nanoserv\Telnet;
 /**
  * Require the Telnet protocol handler
  */
-require_once "{{{FILENAME_TELNET}}}";
+//require_once "{{{FILENAME_TELNET}}}";
 
 /**
  * Telnet with line input protocol handler handler class

@@ -34,7 +34,7 @@ namespace Nanoserv\HTTP\XML_RPC;
 /**
  * Require the XML-RPC server
  */
-require_once "{{{FILENAME_XML_RPC}}}";
+//require_once "{{{FILENAME_XML_RPC}}}";
 
 /**
  * Persistent XML-RPC server class

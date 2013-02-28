@@ -34,7 +34,7 @@ namespace Nanoserv;
 /**
  * Require the nanoserv core
  */
-require_once "{{{FILENAME_CORE}}}";
+//require_once "{{{FILENAME_CORE}}}";
 
 /**
  * Line input connection handler class

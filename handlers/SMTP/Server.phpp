@@ -34,7 +34,7 @@ namespace Nanoserv\SMTP;
 /**
  * Require the line input connection handler
  */
-require_once "{{{FILENAME_LINE_INPUT}}}";
+//require_once "{{{FILENAME_LINE_INPUT}}}";
 
 /**
  * SMTP Service handler class
