@@ -7,23 +7,23 @@ require "{{{FILENAME_CORE}}}";
 
 class timer_test extends {{{CLASS_CONNECTION_HANDLER}}} {
 
-	public $cd = 10;
+    public $cd = 10;
 
-	function on_Accept() {
+    function on_Accept() {
 
-		$this->Write("starting countdown in 5 seconds ... ");
+        $this->Write("starting countdown in 5 seconds ... ");
 
-		{{{CLASS_CORE}}}::New_Timer(5, array($this, "Countdown"));
+        {{{CLASS_CORE}}}::New_Timer(5, array($this, "Countdown"));
 
-	}
+    }
 
-	function Countdown() {
+    function Countdown() {
 
-		$this->Write($this->cd--." ");
-		
-		{{{CLASS_CORE}}}::New_Timer(0.5, array($this, $this->cd ? "Countdown" : "Disconnect"));
+        $this->Write($this->cd--." ");
+        
+        {{{CLASS_CORE}}}::New_Timer(0.5, array($this, $this->cd ? "Countdown" : "Disconnect"));
 
-	}
+    }
 
 }
 

@@ -7,11 +7,11 @@ require "{{{FILENAME_SOAP_DIRECT}}}";
 
 class dumb_soap_httpd extends {{{CLASS_SOAP_DIRECT_SERVER}}} {
 
-	public function buy($bar, $baz) {
+    public function buy($bar, $baz) {
 
-		return array("foo" => $bar + $baz);
+        return array("foo" => $bar + $baz);
 
-	}
+    }
 
 }
 

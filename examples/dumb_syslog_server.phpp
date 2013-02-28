@@ -7,16 +7,16 @@ require "{{{FILENAME_SYSLOG}}}";
 
 class dumb_syslogger extends {{{CLASS_SYSLOG_SERVER}}} {
 
-	public function on_Event($host, $facility, $severity, $message) {
+    public function on_Event($host, $facility, $severity, $message) {
 
-		echo "--- Syslog event --------------------------------------------------------------\n";
-		echo "Datetime : ".date("Y-m-d H:i:s")."\n";
-		echo "Host     : {$host}\n";
-		echo "Facility : ".self::Code_To_Facility($facility)."\n";
-		echo "Severity : {$severity}\n";
-		echo "Message  : ".trim($message)."\n";
+        echo "--- Syslog event --------------------------------------------------------------\n";
+        echo "Datetime : ".date("Y-m-d H:i:s")."\n";
+        echo "Host     : {$host}\n";
+        echo "Facility : ".self::Code_To_Facility($facility)."\n";
+        echo "Severity : {$severity}\n";
+        echo "Message  : ".trim($message)."\n";
 
-	}
+    }
 
 }
 

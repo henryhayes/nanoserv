@@ -47,37 +47,37 @@ namespace Nanoserv\HTTP\SOAP;
  */
 abstract class {{{CLASS_SOAP_DIRECT_SERVER}}} extends {{{CLASS_SOAP_SERVER}}} {
 
-	final public function on_Call($method, $args) {
+    final public function on_Call($method, $args) {
 
-		if (is_callable(array($this, $method))) return call_user_func_array(array($this, $method), $args);
+        if (is_callable(array($this, $method))) return call_user_func_array(array($this, $method), $args);
 
-	}
+    }
 
-	public function Get_Exports() {
+    public function Get_Exports() {
 
-		$ret = array();
-		
-		$rc = new {{{CLASS_SYS_REFLECTIONCLASS}}}(get_class($this));
+        $ret = array();
+        
+        $rc = new {{{CLASS_SYS_REFLECTIONCLASS}}}(get_class($this));
 
-		foreach ($rc->getMethods() as $rm) {
+        foreach ($rc->getMethods() as $rm) {
 
-			if ((!$rm->isPublic()) || ($rm->getDeclaringClass() != $rc)) continue;
-			
-			$params = array();
+            if ((!$rm->isPublic()) || ($rm->getDeclaringClass() != $rc)) continue;
+            
+            $params = array();
 
-			foreach ($rm->getParameters() as $rp) {
+            foreach ($rm->getParameters() as $rp) {
 
-				$params[] = array("name" => $rp->getName());
-			
-			}
+                $params[] = array("name" => $rp->getName());
+            
+            }
 
-			$ret[$rm->getName()] = $params;
-		
-		}
-	
-		return $ret;
-	
-	}
+            $ret[$rm->getName()] = $params;
+        
+        }
+    
+        return $ret;
+    
+    }
 
 }
 

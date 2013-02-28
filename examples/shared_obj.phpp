@@ -7,33 +7,33 @@ require "{{{FILENAME_HTTP}}}";
 
 class dumb_httpd extends {{{CLASS_HTTP_SERVER}}} {
 
-	private $shared_obj;
+    private $shared_obj;
 
-	public function __construct($o) {
+    public function __construct($o) {
 
-		$this->shared_obj = $o;
+        $this->shared_obj = $o;
 
-	}
+    }
 
-	public function on_Request($url) {
+    public function on_Request($url) {
 
-		$val = $this->shared_obj->foo();
+        $val = $this->shared_obj->foo();
 
-		return "[".posix_getpid()."] Content of shared value : <b>$val</b>";
+        return "[".posix_getpid()."] Content of shared value : <b>$val</b>";
 
-	}
+    }
 
 }
 
 class foo_inc {
 
-	public $value = 0;
+    public $value = 0;
 
-	public function foo() {
+    public function foo() {
 
-		return ++$this->value;
+        return ++$this->value;
 
-	}
+    }
 
 }
 

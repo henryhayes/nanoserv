@@ -12,11 +12,11 @@ use {{{CLASS_CORE}}} as Nanoserv;
 
 class dumb_httpd extends {{{CLASS_HTTP_SERVER}}} {
 
-	public function on_Request($url) {
+    public function on_Request($url) {
 
-		return "You asked for url : <b>{$url}</b>\n";
+        return "You asked for url : <b>{$url}</b>\n";
 
-	}
+    }
 
 }
 

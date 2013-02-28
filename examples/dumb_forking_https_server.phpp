@@ -7,13 +7,13 @@ require "{{{FILENAME_HTTP}}}";
 
 class dumb_httpd extends {{{CLASS_HTTP_SERVER}}} {
 
-	public function on_Request($url) {
+    public function on_Request($url) {
 
-		echo date("Ymd:His")." got hit by ".$this->socket->Get_Peer_Name()." : '{$url}'\n";
+        echo date("Ymd:His")." got hit by ".$this->socket->Get_Peer_Name()." : '{$url}'\n";
 
-		return "You asked for url : <b>$url</b>";
+        return "You asked for url : <b>$url</b>";
 
-	}
+    }
 
 }
 

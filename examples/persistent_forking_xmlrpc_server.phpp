@@ -7,13 +7,13 @@ require "{{{FILENAME_XML_RPC_PERSISTENT}}}";
 
 class dumb_xmlrpc {
 
-	public $bar;
+    public $bar;
 
-	public function getFoo($bar) {
+    public function getFoo($bar) {
 
-		return array("foo" => "foo{$bar}", "bar" => $this->bar++);
+        return array("foo" => "foo{$bar}", "bar" => $this->bar++);
 
-	}
+    }
 
 }
 

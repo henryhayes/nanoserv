@@ -14,27 +14,27 @@ use {{{CLASS_CORE}}} as Nanoserv;
 
 function rfc868_time() {
 
-	return pack("N", time() + 2208988800);
+    return pack("N", time() + 2208988800);
 
 }
 
 class time_server_tcp extends {{{CLASS_CONNECTION_HANDLER}}} {
 
-	public function on_Accept() {
+    public function on_Accept() {
 
-		$this->Write(rfc868_time(), array($this, "Disconnect"));
+        $this->Write(rfc868_time(), array($this, "Disconnect"));
 
-	}
+    }
 
 }
 
 class time_server_udp extends {{{CLASS_DATAGRAM_HANDLER}}} {
 
-	public function on_Read($from, $data) {
+    public function on_Read($from, $data) {
 
-		$this->Write($from, rfc868_time());
+        $this->Write($from, rfc868_time());
 
-	}
+    }
 
 }
 

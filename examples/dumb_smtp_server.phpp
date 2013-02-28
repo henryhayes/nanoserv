@@ -7,15 +7,15 @@ require "{{{FILENAME_SMTP}}}";
 
 class dumb_smtpd extends {{{CLASS_SMTP_SERVER}}} {
 
-	function on_Mail($from, $to, $data) {
+    function on_Mail($from, $to, $data) {
 
-		echo "mail from: $from\n";
-		echo "mail to  : ".implode(", ", $to)."\n";
-		echo "\n".$data."[EOM]\n";
+        echo "mail from: $from\n";
+        echo "mail to  : ".implode(", ", $to)."\n";
+        echo "\n".$data."[EOM]\n";
 
-		return false;
+        return false;
 
-	}
+    }
 
 }
 

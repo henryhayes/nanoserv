@@ -7,11 +7,11 @@ require "{{{FILENAME_JSON_RPC_DIRECT}}}";
 
 class dumb_jsonrpc_httpd extends {{{CLASS_JSON_RPC_DIRECT_SERVER}}} {
 
-	public function getFoo($bar) {
+    public function getFoo($bar) {
 
-		return array("foo" => $bar);
+        return array("foo" => $bar);
 
-	}
+    }
 
 }
 

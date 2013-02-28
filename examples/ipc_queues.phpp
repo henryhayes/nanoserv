@@ -72,80 +72,80 @@ use {{{CLASS_CORE}}} as Nanoserv;
 
 function pecho($s) {
 
-	echo "[".posix_getpid()."] {$s}\n";
+    echo "[".posix_getpid()."] {$s}\n";
 
 }
 
 class My_Queue {
 
-	// overly simple queue/dequeue class
-	
-	public $elements = array();
-	public $num_done = 0;
+    // overly simple queue/dequeue class
+    
+    public $elements = array();
+    public $num_done = 0;
 
-	public function Enqueue($element) {
+    public function Enqueue($element) {
 
-		$this->elements[] = $element;
-	
-	}
+        $this->elements[] = $element;
+    
+    }
 
-	public function Dequeue($num_done) {
+    public function Dequeue($num_done) {
 
-		$this->num_done += $num_done;
-		
-		return array_shift($this->elements);
-	
-	}
+        $this->num_done += $num_done;
+        
+        return array_shift($this->elements);
+    
+    }
 
 }
 
 class My_Worker {
 
-	static public $queue;
-	
-	public function Do_Work($element) {
+    static public $queue;
+    
+    public function Do_Work($element) {
 
-		$mt = microtime(true);
-		
-		// Consume some CPU time
-		for ($a = 0; $a < 3000000; $a++);
-	
-		if ($element % 20 === 0) {
-		
-			// Be verbose for every multiple of 20
-			pecho("finished work on element #{$element} in " . number_format(microtime(true) - $mt, 2) . " sec.");
+        $mt = microtime(true);
+        
+        // Consume some CPU time
+        for ($a = 0; $a < 3000000; $a++);
+    
+        if ($element % 20 === 0) {
+        
+            // Be verbose for every multiple of 20
+            pecho("finished work on element #{$element} in " . number_format(microtime(true) - $mt, 2) . " sec.");
 
-		}
-	
-	}
+        }
+    
+    }
 
-	public function Run() {
+    public function Run() {
 
-		$processed = 0;
-		
-		while (true) {
+        $processed = 0;
+        
+        while (true) {
 
-			if ($data = self::$queue->Dequeue($processed)) {
+            if ($data = self::$queue->Dequeue($processed)) {
 
-				// Do the work
-		
-				self::Do_Work($data);
+                // Do the work
+        
+                self::Do_Work($data);
 
-				$processed = 1;
+                $processed = 1;
 
-			} else {
+            } else {
 
-				// Or sleep if there's nothing to do
-				
-				usleep(50000);
+                // Or sleep if there's nothing to do
+                
+                usleep(50000);
 
-				$processed = 0;
-			
-			}
-		
-		}
-	
-	}
+                $processed = 0;
+            
+            }
+        
+        }
+    
+    }
 
 }
 
@@ -158,16 +158,16 @@ $pids = array();
 
 for ($a = 0; $a < NUM_CHILDREN; $a++) {
 
-	if (($pid = Nanoserv::Fork()) === 0) {
-		
-		// Run the child process
-		My_Worker::Run();
-	
-	} else {
+    if (($pid = Nanoserv::Fork()) === 0) {
+        
+        // Run the child process
+        My_Worker::Run();
+    
+    } else {
 
-		$pids[] = $pid;
+        $pids[] = $pid;
 
-	}
+    }
 
 }
 
@@ -180,21 +180,21 @@ $start_mt = microtime(true);
 
 while (My_Worker::$queue->num_done < WORK_LOAD) {
 
-	Nanoserv::Run(10);
+    Nanoserv::Run(10);
 
-	if ((time() !== $t) || (count(My_Worker::$queue->elements) < NUM_CHILDREN)) {
+    if ((time() !== $t) || (count(My_Worker::$queue->elements) < NUM_CHILDREN)) {
 
-		// Fill the queue every second or when it's almost empty
-		
-		for ($a = 0; ($a < NUM_CHILDREN * 2) && ($b < WORK_LOAD); $a++) {
-			
-			My_Worker::$queue->Enqueue(++$b);
+        // Fill the queue every second or when it's almost empty
+        
+        for ($a = 0; ($a < NUM_CHILDREN * 2) && ($b < WORK_LOAD); $a++) {
+            
+            My_Worker::$queue->Enqueue(++$b);
 
-		}
-	
-		$t = time();
+        }
+    
+        $t = time();
 
-	}
+    }
 
 }
 
