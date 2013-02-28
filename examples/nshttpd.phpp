@@ -61,7 +61,7 @@ class NS_httpd extends {{{CLASS_HTTP_SERVER}}} {
 
 $docroot = realpath($argv[1]) or die("usage: ".$argv[0]." /path/to/document/root\n");
 
-{{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:800", "NS_httpd", $docroot)->Activate();
+{{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:8080", "NS_httpd", $docroot)->Activate();
 
 $ssl = {{{CLASS_CORE}}}::New_Listener("ssl://0.0.0.0:443", "NS_httpd", $docroot);
 

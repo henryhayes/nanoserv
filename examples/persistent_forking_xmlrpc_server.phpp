@@ -19,7 +19,7 @@ class dumb_xmlrpc {
 
 $o = new dumb_xmlrpc();
 
-$l = {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:800", '{{{CLASS_XML_RPC_PERSISTENT_SERVER}}}', {{{CLASS_CORE}}}::New_Shared_Object($o));
+$l = {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:8080", '{{{CLASS_XML_RPC_PERSISTENT_SERVER}}}', {{{CLASS_CORE}}}::New_Shared_Object($o));
 
 $l->Set_Forking();
 $l->Activate();

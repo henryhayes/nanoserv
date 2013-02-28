@@ -15,6 +15,6 @@ class dumb_xmlrpc_httpd extends {{{CLASS_XML_RPC_DIRECT_SERVER}}} {
 
 }
 
-{{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:800", "dumb_xmlrpc_httpd")->Activate();
+{{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:8080", "dumb_xmlrpc_httpd")->Activate();
 {{{CLASS_CORE}}}::Run();
 

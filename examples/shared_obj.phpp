@@ -38,7 +38,7 @@ class foo_inc {
 }
 
 $o = {{{CLASS_CORE}}}::New_Shared_Object(new foo_inc);
-$l = {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:800", "dumb_httpd", $o);
+$l = {{{CLASS_CORE}}}::New_Listener("tcp://0.0.0.0:8080", "dumb_httpd", $o);
 
 $l->Set_Forking();
 $l->Activate();
